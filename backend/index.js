@@ -43,7 +43,9 @@ app.use(cors(
     credentials: true
   }
 ));
-
+app.get("/",(req,res) => {
+  res.json("Hi hello");
+})
 // Routes
 app.use("/api/campaigns", campaignRoute);
 app.use("/api/socialgroup", socialgroupRouter);
