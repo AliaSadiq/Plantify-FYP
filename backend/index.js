@@ -23,9 +23,7 @@ const questionRoutes=require("./routes/social-question.route.js");
 const teamroute=require("./routes/team.route.js");
 
 const app = express();
- module.exports = (req, res) => {
-  res.status(200).json({ message: "Hello from the backend!" });
-};
+
 
 // Rate limiting
 const limiter = rateLimit({
