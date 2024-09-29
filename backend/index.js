@@ -35,7 +35,13 @@ app.use('/api/user', limiter);
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://plantify-fyp.vercel.app"],
+    methods:["POST","GET","PUT","DELETE"],
+    credentials: true
+  }
+));
 
 // Routes
 app.use("/api/campaigns", campaignRoute);
