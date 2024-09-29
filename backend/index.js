@@ -21,14 +21,13 @@ const reviewRoutes = require("./routes/social-review.route.js");
 const requestCampaignRoute = require("./routes/campaign-request.route.js");
 const questionRoutes=require("./routes/social-question.route.js");
 const teamroute=require("./routes/team.route.js");
-
 const app = express();
 
 
 // Rate limiting
 const limiter = rateLimit({
   max: 100,
-  windowMs: 60 * 60 * 1000,
+  windowMs: 60 * 60 * 1000, 
   message: "Too many requests from this IP, please try again in an hour."
 });
 app.use('/api/user', limiter);
@@ -38,14 +37,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors(
   {
-    origin:["https://plantify-fyp.vercel.app/"],
+ origin: ["https://plantify-fyp-frontend.vercel.app", "https://plantify-fyp.vercel.app"],
     methods:["POST","GET","PUT","DELETE"],
     credentials: true
   }
 ));
-app.get("/",(req,res) => {
-  res.json("Hi hello");
-})
+
 // Routes
 app.use("/api/campaigns", campaignRoute);
 app.use("/api/socialgroup", socialgroupRouter);
