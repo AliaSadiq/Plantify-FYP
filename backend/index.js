@@ -40,7 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors(
   {
-    origin:["https://plantify-fyp.vercel.app"],
+    origin:["https://plantify-fyp.vercel.app/"],
     methods:["POST","GET","PUT","DELETE"],
     credentials: true
   }
