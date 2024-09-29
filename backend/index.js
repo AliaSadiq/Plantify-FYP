@@ -71,7 +71,5 @@ mongoose.connect(process.env.MONGODB_URL)
     console.log("Connection failed!", error);
   });
   
-  module.exports = (req, res) => {
-    res.status(200).json({ message: "Hello from the backend!" });
-  };
+ 
   
