@@ -58,7 +58,16 @@ export default function CampaignDetailsPage() {
         setIsModalOpen(false);
     };
 
-   
+    //volunteers popup
+    // const handleReportModalOpen = () => {
+    //     setIsReportModalOpen(true);
+    // };
+
+    // const handleReportModalClose = () => {
+    //     setIsReportModalOpen(false);
+    // };
+
+    //fetching the campaign and the campaign commments
     useEffect(() => {
         const fetchCampaignDetails = async () => {
             try {
